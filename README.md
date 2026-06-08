@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
@@ -100,4 +99,3 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 =======
 # api-repository-analyzer
 NestJs service using REST API that analyzes public GitHub profiles and repositories and calculates some portfolio quality metrics.
->>>>>>> ec2c26709d127f99213e80648d4fa21dcd6a5cad
