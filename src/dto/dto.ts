@@ -17,22 +17,28 @@ export class UserDto {
   @IsNumber()
   following!: number
   @IsNumber()
-  public_repos!: number
+  public_repos_No!: number
+
+  repositories!: RepoInfo[]
 
   constructor(partial: Partial<UserDto>) {
     Object.assign(this, partial)
   }
 }
 
-export class Repositories {
+export class RepoInfo {
 
   @IsString()
   name!: string
   @IsString()
   language!: string
-  @IsString()
-  star_count!: string
-  @IsString()
-  score!: string
+  @IsNumber()
+  star_count!: number
+
+  score!: number
+
+  constructor(partial: Partial<RepoInfo>) {
+    Object.assign(this, partial);
+  }
 
 }
