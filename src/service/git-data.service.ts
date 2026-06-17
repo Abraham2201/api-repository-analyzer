@@ -26,6 +26,7 @@ export class GitDataService {
         followers: response.data.followers,
         following: response.data.following,
         public_repos_No: response.data.public_repos,
+        analized_repos: reposInfo.length,
         repositories: reposInfo
       })
 
@@ -42,6 +43,7 @@ export class GitDataService {
     let repos: RepoInfo[] = [];
     try {
       const response = (await this.httpService.axiosRef.get(this.config.get('gitApiUrl') + this.user + "/repos"));
+      this.logger.log(`Total repos received to analyze: ${response.data.length}`);
       repos = response.data.map(repo => {
         const r = new RepoInfo({
           name: repo.name,

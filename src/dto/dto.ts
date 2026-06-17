@@ -18,7 +18,7 @@ export class UserDto {
   following!: number
   @IsNumber()
   public_repos_No!: number
-
+  analized_repos!: number
   repositories!: RepoInfo[]
 
   constructor(partial: Partial<UserDto>) {
